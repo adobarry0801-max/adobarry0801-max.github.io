@@ -82,6 +82,16 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
 .bottom-bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;padding:10px 14px;z-index:20}
 .bottom-bar a{flex:1}
 @media(min-width:640px){.bottom-bar{display:none}body{padding-bottom:0}}
+.ba{--pos:50%;position:relative;border-radius:12px;overflow:hidden;margin:22px 0 6px}
+.ba img{display:block;width:100%;height:auto}
+.ba .ba-after{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.45);transform:translateX(-50%);pointer-events:none}
+.ba .ba-label{position:absolute;top:10px;font-size:12.5px;font-weight:700;color:#fff;background:rgba(0,0,0,.55);border-radius:999px;padding:2px 12px;pointer-events:none}
+.ba .ba-label-before{right:10px}
+.ba .ba-label-after{left:10px}
+.ba-range{width:100%;margin:10px 0 4px;accent-color:var(--green);cursor:pointer}
+.ba figcaption{font-size:12.5px;color:var(--sub);margin-top:6px}
+.review .stars{font-size:17px;color:#e8a13a;letter-spacing:.08em}
 </style>
 <script type="application/ld+json">
 {
@@ -162,6 +172,10 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
       <a class="btn btn-tel" href="tel:09051295644">電話で相談する</a>
     </div>
     <p class="note">通常タイプ 7,500円／台 → Web予約で6,750円／台（お掃除機能付き 14,000円 → 12,600円）</p>
+    <figure class="lp-fig">
+      <img src="../img/hero-living.webp" alt="大津区のエアコンクリーニング作業イメージ" width="1200" height="800">
+      <figcaption>※画像はイメージです</figcaption>
+    </figure>
   </div>
 </div>
 
@@ -209,6 +223,24 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <h2>ビフォーアフター</h2>
+    <p>スライダーを動かすと、清掃前と清掃後を比べられます。実際の施工写真です（姫路市のお客様宅・3年ぶりのエアコンクリーニング）。</p>
+    <figure>
+      <div class="ba" id="baCompare">
+        <img src="../img/ba-vent-before.webp" alt="清掃前のエアコン吹き出し口（実際の施工写真）" width="1200" height="800">
+        <img class="ba-after" src="../img/ba-vent-after.webp" alt="清掃後のエアコン吹き出し口（実際の施工写真）" width="1200" height="800">
+        <span class="ba-label ba-label-after">清掃後</span>
+        <span class="ba-label ba-label-before">清掃前</span>
+        <span class="ba-handle"></span>
+      </div>
+      <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" step="1" aria-label="清掃前と清掃後を比べるスライダー">
+      <figcaption>吹き出し口のビフォーアフター（姫路市・3年ぶりのクリーニング）</figcaption>
+    </figure>
+  </div>
+</section>
+
 <section id="price">
   <div class="wrap">
     <h2>料金</h2>
@@ -239,16 +271,19 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
     <p>アドバリーは、姫路を中心に地域のお客様から、これまでに合計653件の口コミをいただいています。</p>
     <div class="review-box">
       <div class="review">
-        <div class="num">★4.8</div>
-        <div class="src">Googleの口コミ 108件</div>
+        <div class="stars">★★★★★</div>
+        <div class="num">★4.8・108件</div>
+        <div class="src">Googleの口コミ</div>
       </div>
       <div class="review">
-        <div class="num">★4.87</div>
-        <div class="src">ユアマイスターの口コミ 491件</div>
+        <div class="stars">★★★★★</div>
+        <div class="num">★4.87・491件</div>
+        <div class="src">ユアマイスターの口コミ</div>
       </div>
       <div class="review">
-        <div class="num">★5.0</div>
-        <div class="src">おうちにプロの口コミ 54件</div>
+        <div class="stars">★★★★★</div>
+        <div class="num">★5.0・54件</div>
+        <div class="src">おうちにプロの口コミ</div>
       </div>
     </div>
   </div>
@@ -322,5 +357,14 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
   <a class="btn btn-main" href="https://adobarry-reservation.github.io/">Web予約（10%OFF）</a>
 </div>
 
+<script>
+  var wrap = document.getElementById('baCompare');
+  var range = document.getElementById('baRange');
+  if(wrap && range){
+    function update(){ wrap.style.setProperty('--pos', range.value + '%'); }
+    range.addEventListener('input', update);
+    update();
+  }
+</script>
 </body>
 </html>
