@@ -92,6 +92,24 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
 .ba-range{width:100%;margin:10px 0 4px;accent-color:var(--green);cursor:pointer}
 .ba figcaption{font-size:12.5px;color:var(--sub);margin-top:6px}
 .review .stars{font-size:17px;color:#e8a13a;letter-spacing:.08em}
+
+.greview{margin-top:18px}
+.greview-viewport{overflow:hidden}
+.greview-track{display:flex;gap:14px;transition:transform .45s ease}
+.greview-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;flex:0 0 100%;box-sizing:border-box;text-align:left}
+@media(min-width:768px){.greview-card{flex-basis:calc((100% - 28px)/3)}}
+.greview-meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:4px}
+.greview-author{font-weight:700;font-size:15.5px}
+.greview-when{font-size:13px;color:var(--sub);white-space:nowrap}
+.greview-stars{font-size:15px;color:#e8a13a;letter-spacing:.08em;margin-bottom:8px}
+.greview-text{font-size:14.5px;line-height:1.75;margin:0}
+.greview-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px}
+.greview-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--green-dark);font-size:22px;line-height:1;cursor:pointer}
+.greview-btn:disabled{opacity:.35;cursor:default}
+.greview-dots{display:flex;gap:7px}
+.greview-dot{width:9px;height:9px;border-radius:50%;border:none;background:var(--line);cursor:pointer;padding:0}
+.greview-dot.active{background:var(--green)}
+.greview-note{margin-top:10px;text-align:right}
 </style>
 <script type="application/ld+json">
 {
@@ -286,6 +304,55 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
       </div>
     </div>
     <p class="small" style="margin-top:12px">口コミは合計653件。姫路を中心に、地域のお客様からご依頼いただいています。</p>
+    <div class="greview" aria-label="Googleの口コミ">
+      <div class="greview-viewport">
+        <div class="greview-track">
+        <article class="greview-card">
+          <div class="greview-meta"><span class="greview-author">馬場皓大</span><span class="greview-when">3 週間前</span></div>
+          <div class="greview-stars" aria-label="5つ星のうち5">★★★★★</div>
+          <p class="greview-text">エアコンクリーニングをお願いしたけど、本当に満足！担当の中畑さんがとても丁寧に接客してくれて、作業のビフォーアフターをしっかり説明してくれたので安心してお任せできました。赤ちゃんがいるので、エアコンの臭いが消えて本当に助かりました。室外機やドレンホースの掃除も含まれていて、細かいところまできちんとケアしてくれるのが嬉しい。エアコンの汚れや臭いが気になるなら、ここは絶対おすすめです！</p>
+        </article>
+        <article class="greview-card">
+          <div class="greview-meta"><span class="greview-author">牧野晃也</span><span class="greview-when">3 か月前</span></div>
+          <div class="greview-stars" aria-label="5つ星のうち5">★★★★★</div>
+          <p class="greview-text">ダイキンの自動清掃付きエアコンを清掃していただきました。購入してから約10年が経ち、1度も清掃していなかったせいか、洗浄液の真っ黒な状態を見せていただきびっくりしました。とても丁寧な作業で、清掃中間の状況説明やビフォアアフターの内部写真等を見せていただき安心して依頼できました。作業代金も、当初の説明通りでした。<br>
+他のエアコン清掃する時もアドバリーさんにお願いしたいと思います。</p>
+        </article>
+        <article class="greview-card">
+          <div class="greview-meta"><span class="greview-author">塚原良</span><span class="greview-when">3 か月前</span></div>
+          <div class="greview-stars" aria-label="5つ星のうち5">★★★★★</div>
+          <p class="greview-text">どんな方が来るのか少し不安でしたが、とても話しく色々なお話しもして頂き頼んで良かったです。エアコンクリーニングなんて本当に必要かなと思いましたが、随分汚れていました。<br>
+ビフォーアフターも動画で見させて頂き、違いが分かりやすかったです。<br>
+洗浄で使用された、浴室やトイレなど使用前より綺麗になっていました！<br>
+<br>
+ちょっとした気遣いがとても良かったです。</p>
+        </article>
+        <article class="greview-card">
+          <div class="greview-meta"><span class="greview-author">とも子</span><span class="greview-when">5 か月前</span></div>
+          <div class="greview-stars" aria-label="5つ星のうち5">★★★★★</div>
+          <p class="greview-text">エアコンクリーニングを２台お願いしました。<br>
+蔵重さんに丁寧に作業して頂き、とっても綺麗になりました。作業前後の動画や写真を見せて下さり、新品同様にピカピカになっていたので、今年の夏は安心して使えます！<br>
+パーツの洗浄に使用したお風呂場の排水口と換気扇フィルターもお掃除して下さり、とてもありがたかったです。<br>
+ぜひまた利用させて頂きたいと思います。<br>
+ありがとうございました！</p>
+        </article>
+        <article class="greview-card">
+          <div class="greview-meta"><span class="greview-author">中畑愛佳</span><span class="greview-when">6 か月前</span></div>
+          <div class="greview-stars" aria-label="5つ星のうち5">★★★★★</div>
+          <p class="greview-text">姫路でエアコンのカビや、お風呂の換気扇・フィルターの汚れが気になり、クリーニングとお掃除をお願いしました。まとめて対応していただけて、料金もリーズナブルで依頼しやすかったです。<br>
+作業もスムーズに進み、気になっていた汚れがしっかり落ちて全体的にすっきりしました。エアコンも以前より快適に使えるようになり、安心して過ごせています。<br>
+作業中に出た汚水の扱いやトイレの使用については、今後もう少し事前に説明があるとより安心できると感じましたが、全体としては丁寧に対応していただけた印象です。<br>
+姫路でクリーニングやお掃除を検討している方には、価格と対応のバランスが良く、利用しやすい業者さんだと思います。</p>
+        </article>
+        </div>
+      </div>
+      <div class="greview-nav">
+        <button type="button" class="greview-btn greview-prev" aria-label="前の口コミ">&#8249;</button>
+        <div class="greview-dots"></div>
+        <button type="button" class="greview-btn greview-next" aria-label="次の口コミ">&#8250;</button>
+      </div>
+      <p class="small greview-note">Googleの口コミより（2026年11月4日取得）</p>
+    </div>
   </div>
 </section>
 
@@ -365,6 +432,53 @@ footer.site{padding:26px 0 10px;font-size:13px;color:var(--sub);text-align:cente
     range.addEventListener('input', update);
     update();
   }
+</script>
+
+<script>
+(function(){
+  var root = document.querySelector('.greview');
+  if(!root) return;
+  var track = root.querySelector('.greview-track');
+  var cards = root.querySelectorAll('.greview-card');
+  var prev = root.querySelector('.greview-prev');
+  var next = root.querySelector('.greview-next');
+  var dotsBox = root.querySelector('.greview-dots');
+  var idx = 0;
+  function perView(){ return window.innerWidth >= 768 ? 3 : 1; }
+  function maxIdx(){ return Math.max(0, cards.length - perView()); }
+  function buildDots(){
+    dotsBox.innerHTML = '';
+    for(var i = 0; i <= maxIdx(); i++){
+      (function(i){
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'greview-dot' + (i === idx ? ' active' : '');
+        d.setAttribute('aria-label', (i + 1) + '番目の口コミへ');
+        d.addEventListener('click', function(){ idx = i; render(); });
+        dotsBox.appendChild(d);
+      })(i);
+    }
+  }
+  function render(){
+    if(idx > maxIdx()) idx = maxIdx();
+    if(idx < 0) idx = 0;
+    var card = cards[0];
+    var gap = 14;
+    var step = card.getBoundingClientRect().width + gap;
+    track.style.transform = 'translateX(' + (-idx * step) + 'px)';
+    prev.disabled = (idx <= 0);
+    next.disabled = (idx >= maxIdx());
+    var dots = dotsBox.children;
+    for(var i = 0; i < dots.length; i++){
+      dots[i].classList.toggle('active', i === idx);
+    }
+  }
+  prev.addEventListener('click', function(){ idx--; render(); });
+  next.addEventListener('click', function(){ idx++; render(); });
+  window.addEventListener('resize', function(){ buildDots(); render(); });
+  buildDots();
+  render();
+})();
 </script>
 </body>
 </html>
