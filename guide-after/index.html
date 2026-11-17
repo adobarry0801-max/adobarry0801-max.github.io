@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご予約後のご質問｜アドバリー</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--navy:#14365d;--navy2:#0f2c4c;--bg:#dbe7f3;--green:#1f9d55;--orange:#f08300;--ink:#222;--mut:#666;--line:#d7e0ea}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg);min-height:100vh}
+header{background:var(--navy);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:30}
+.logo{font-weight:800;font-size:18px}
+.logo small{display:block;font-size:10px;font-weight:400;opacity:.85}
+main{padding:14px 12px 20px}
+.chat{display:flex;gap:10px;margin:10px 0}
+.avatar{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px}
+.bubble{background:#fff;border-radius:14px;border-top-left-radius:4px;padding:11px 13px;font-size:14.5px;flex:1;box-shadow:0 1px 3px rgba(20,54,93,.08)}
+.bubble.q{background:var(--green);color:#fff;border-radius:14px;border-top-right-radius:4px;border-top-left-radius:14px}
+.qwrap{display:flex;justify-content:flex-end;margin:10px 0}
+.qwrap .bubble{flex:0 1 85%}
+.cat{font-weight:800;color:var(--navy);margin:18px 0 8px;font-size:15px}
+.chips{display:grid;gap:8px}
+.chip{background:#fff;border:none;border-radius:999px;padding:12px 16px;font-size:14.5px;font-weight:600;text-align:left;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(20,54,93,.10);width:100%}
+.chip:active{background:#eef4fa}
+.chip.used{opacity:.45}
+.human{background:#fff;border-radius:14px;padding:16px;margin:22px 0 6px;box-shadow:0 1px 3px rgba(20,54,93,.08)}
+.human .tt{font-weight:800;font-size:17px;margin-bottom:6px}
+.human p{font-size:14px}
+.human p b{color:var(--navy)}
+.btns{display:grid;gap:10px;margin-top:12px}
+.btns a{display:block;text-decoration:none;font-weight:800;border-radius:999px;padding:15px;font-size:16px;text-align:center;color:#fff}
+.btns .tel{background:var(--green)}
+.btns .lineb{background:var(--green)}
+.copyline{margin-top:10px;font-size:13.5px;text-decoration:underline;cursor:pointer;color:var(--navy)}
+.note{font-size:12px;color:#4a5a6a;text-align:center;margin:16px 4px}
+footer{color:#4a5a6a;text-align:center;padding:14px 12px 22px;font-size:13px}
+footer a{color:var(--navy);font-weight:800}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">アドバリー<small>ご予約後のご案内</small></div></header>
+<main>
+<div class="chat"><div class="avatar">ア</div><div class="bubble">ご予約ありがとうございます。作業日までの不安や疑問に、よくある質問でお答えします。気になる質問を押してください。</div></div>
+<div class="js-qa"></div>
+<div class="js-log"></div>
+<div class="human">
+<div class="tt">ご家族やお知り合いに紹介しませんか</div>
+<p>紹介された方がご予約のうえ作業とお支払いが終わると、紹介料として<b>通常価格の10%</b>をお支払いします（例：通常タイプ1台なら750円、お掃除機能付き1台なら1,400円）。</p>
+<p style="margin-top:8px">紹介のしかた：下の文面をコピーして、紹介したい方へ送ってください。ご予約の際、紹介コード欄に<b>あなたの受付番号</b>を入れてもらうだけです。</p>
+<p class="js-mycode" style="margin-top:10px;font-size:17px;font-weight:800;color:var(--navy)"></p>
+<div class="btns">
+<a class="lineb js-lineshare" href="#" target="_blank" rel="noopener">LINEで送る</a>
+</div>
+<p class="copyline js-copy2">紹介文面をコピー</p>
+<p style="margin-top:10px;font-size:12.5px;color:var(--mut)">条件：ご自身のご予約・同一世帯のご予約は対象外です。紹介料は、紹介された方の作業とお支払いの確認後にお支払いします（方法は担当者よりご連絡します）。SNSに載せる場合は、紹介料が出ることが分かるよう「PR」と書いてください。</p>
+</div>
+<div class="human">
+<div class="tt">人とお話しする</div>
+<p>確認メールの<b>受付番号</b>をお伝えください。</p>
+<div class="btns">
+<a class="tel" href="tel:09051295644">電話する 090-5129-5644</a>
+<a class="lineb" href="https://lin.ee/UGtrEgJ" target="_blank" rel="noopener">LINEで聞く</a>
+</div>
+<p class="copyline js-copy">「受付番号について質問です。」をコピー</p>
+</div>
+<p class="note">このページは定型のご案内です。正式なご案内は、担当者からの連絡が優先されます。</p>
+</main>
+<footer>
+アドバリー（エアコンクリーニング専門店）<br>
+<a href="tel:09051295644">☎ 090-5129-5644</a>（8:00〜18:00・定休日なし）
+</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var QA=[["当日のこと", [["予約した内容を確認したい", "ご予約内容は、送信後にお送りする確認メールに記載されています。メールが届いていない場合は、迷惑メールフォルダもご確認ください。それでも見つからない場合は、下の「人とお話しする」からご連絡ください。"], ["何時ごろ来ますか？", "ご希望いただいた時間帯（9時〜12時／12時〜15時／15時〜18時）の中で伺います。正確な日時は、日程確定のご連絡の際にお伝えします。"], ["作業は何分くらいかかりますか？", "目安は、通常タイプ1台で1〜1.5時間、お掃除機能付き1台で2〜2.5時間です。台数や汚れ具合で前後します。"], ["予約はいつ確定しますか？連絡はどう来ますか？", "担当者より、お電話かメールでご連絡し、作業日を確定します。第1希望が難しい場合は、再調整のご連絡をします。"], ["作業中、家にいないといけませんか？", "仕上がりのご確認をお願いしているため、基本的にはご在宅をお願いしています。難しい場合は、事前にお電話・LINEでご相談ください。"], ["雨の日でも作業しますか？", "室内の作業が中心ですので、通常どおり作業します。"], ["エアコンの下や周りは片づけておいた方がいいですか？", "貴重品や壊れやすいものは、事前に移動をお願いします。移動が難しいものは当日ご相談ください。"], ["電源や水道は使いますか？", "使わせていただきます。外した部品を洗うため、浴室などの洗い場も少しお借りします。"], ["駐車場はどうすればいいですか？", "ご予約の際にお知らせいただいた内容で伺います。変更がある場合はご連絡ください。"], ["ペットがいても大丈夫ですか？", "大丈夫です。作業中は、別の部屋で過ごさせていただけると助かります。洗剤はペットにもやさしいエコ洗剤を使います。"], ["小さい子どもがいます。注意することは？", "洗剤はエコ洗剤を使います。作業中は、安全のため作業場所の近くで遊ばせないようお願いします。"], ["エアコンの機種や型番を伝えた方がいいですか？", "分かれば、ご予約の備考欄やLINEで教えていただけると、当日の作業がスムーズです。分からなくても大丈夫です。"]]], ["料金のこと", [["私の料金はいくらですか？", "ご予約内容と概算金額は確認メールに記載されています。エアコンは通常タイプ7,500円／台、お掃除機能付き14,000円／台が基本です。"], ["当日に追加料金がかかることはありますか？", "ご了承なしに追加することはありません。水回りの「〜」がついた料金は最低料金で、汚れ具合で変わる場合は、作業前に必ずご説明します。"], ["お掃除機能付きだと料金は変わりますか？", "はい、1台14,000円です（通常タイプは7,500円／台）。"], ["支払いはいつ、どうやって？", "当日の作業後、仕上がりをご確認いただいてからです。現金・クレジットカードなどでお支払いいただけます。"], ["領収書はもらえますか？", "発行できます。宛名が必要な場合は、当日スタッフにお伝えください。"], ["2台目から安くなりますか？", "2台目からの割引はありません。台数分の料金となります。"], ["台数やオプションをあとから増やせますか？", "空き状況によります。ご希望があれば、事前にお電話・LINEでご相談いただくと確実です。"], ["キャンセル料はいくらですか？", "まずはお電話か公式LINEでご相談ください。空き状況を見て、日程の調整も含めてご案内します。"], ["日にちを変えたいときは？", "お電話か公式LINEでご連絡ください。空き状況を見て調整します。"]]], ["変更・その他", [["保証はありますか？", "作業後に気になる点がありましたら、作業日を含め3日以内にご連絡ください。"], ["作業のあと、においや水漏れが気になったら？", "まずはお電話か公式LINEでご連絡ください。作業日を含め3日以内のご連絡をお願いしています。"], ["どのくらいの頻度で掃除すればいいですか？", "目安は1〜2年に1回です。ペットがいるご家庭や、においが気になる場合は早めがおすすめです。"], ["洗濯機やお風呂も頼めますか？", "浴室・レンジフード・キッチン・トイレ・洗面台などの水回りクリーニングも対応しています。洗濯機はメニューにありませんので、ご希望の場合はお電話・LINEでご相談ください。"], ["紹介料について教えて", "紹介された方がご予約のうえ作業とお支払いが終わると、紹介料として通常価格の10%をお支払いします。紹介のしかたと条件は、このページの「ご家族やお知り合いに紹介しませんか」をご覧ください。"],
+  ["名前や住所はどこまで見られますか？", "ご予約の対応に必要な範囲でのみ使います。目的以外に使うことはありません。"]]]];
+var qaBox=document.querySelector(".js-qa"),log=document.querySelector(".js-log");
+QA.forEach(function(group){
+ var h=document.createElement("div");h.className="cat";h.textContent=group[0];qaBox.appendChild(h);
+ var box=document.createElement("div");box.className="chips";
+ group[1].forEach(function(pair){
+  var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=pair[0];
+  b.addEventListener("click",function(){
+   b.classList.add("used");
+   var qw=document.createElement("div");qw.className="qwrap";
+   qw.innerHTML='<div class="bubble q"></div>';qw.firstChild.textContent=pair[0];log.appendChild(qw);
+   var row=document.createElement("div");row.className="chat";
+   row.innerHTML='<div class="avatar">ア</div><div class="bubble"></div>';row.querySelector(".bubble").textContent=pair[1];log.appendChild(row);
+   row.scrollIntoView({behavior:"smooth",block:"center"});
+  });
+  box.appendChild(b);
+ });
+ qaBox.appendChild(box);
+});
+var CODE="";try{CODE=new URLSearchParams(location.search).get("code")||"";}catch(e){}
+var mc=document.querySelector(".js-mycode");
+if(mc){mc.textContent=CODE?("あなたの紹介コード： "+CODE):"あなたの紹介コード： ご予約時の受付番号です（確認メールに記載）";}
+var SHARE_TEXT="エアコンクリーニングのアドバリー、よかったよ。予約のとき紹介コード欄に「"+(CODE||"私の受付番号")+"」を入れると、私に紹介料が入る仕組みです。予約はこちら：https://adobarry-reservation.github.io/?src=lp";
+var ls=document.querySelector(".js-lineshare");
+if(ls){ls.href="https://line.me/R/msg/text/?"+encodeURIComponent(SHARE_TEXT);}
+var c2=document.querySelector(".js-copy2");
+if(c2){c2.addEventListener("click",function(){if(navigator.clipboard){navigator.clipboard.writeText(SHARE_TEXT);}this.textContent="コピーしました";});}
+document.querySelector(".js-copy").addEventListener("click",function(){
+ var t="受付番号について質問です。";
+ if(navigator.clipboard){navigator.clipboard.writeText(t);}
+ this.textContent="コピーしました：「"+t+"」";
+});
+})();
+</script>
+</body>
+</html>
